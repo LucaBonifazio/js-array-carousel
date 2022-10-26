@@ -28,30 +28,42 @@ const listEleImg = document.querySelectorAll('.slider-img');
 
 let activeIndex = 0;
 
-eleBtnDown.addEventListener('click', function () {
+eleControls.addEventListener ('click'), function () {
 
-	listEleImg[activeIndex].classList.remove('active');
-
+	listEleImg[activeIndex].classList.remove ('active');
 	activeIndex++;
-
 	listEleImg[activeIndex].classList.add('active');
 
-	eleBtnUp.classList.remove('hidden');
+	eleControls.classList.remove('hidden');
 	if (activeIndex === listEleImg.length -1) {
-		eleBtnDown.classList.add('hidden');
-	}
-});
+		eleControls.classList.add('hidden');
+	} 
+}
 
-eleBtnUp.addEventListener('click', function () {
+// eleBtnDown.addEventListener('click', function () {
+
+// 	listEleImg[activeIndex].classList.remove('active');
+
+// 	activeIndex++;
+
+// 	listEleImg[activeIndex].classList.add('active');
+
+// 	eleBtnUp.classList.remove('hidden');
+// 	if (activeIndex === listEleImg.length -1) {
+// 		eleBtnDown.classList.add('hidden');
+// 	} 
+// });
+
+// eleBtnUp.addEventListener('click', function () {
 	
-	listEleImg[activeIndex].classList.remove('active');
+// 	listEleImg[activeIndex].classList.remove('active');
 
-	activeIndex--;
+// 	activeIndex--;
 
-	listEleImg[activeIndex].classList.add('active');
+// 	listEleImg[activeIndex].classList.add('active');
 
-	eleBtnDown.classList.remove('hidden');
-	if (activeIndex === 0) {
-		eleBtnUp.classList.add('hidden');
-	}
-});
+// 	eleBtnDown.classList.remove('hidden');
+// 	if (activeIndex === 0) {
+// 		eleBtnUp.classList.add('hidden');
+// 	}
+// });
