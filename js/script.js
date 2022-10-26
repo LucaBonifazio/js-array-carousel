@@ -28,42 +28,28 @@ const listEleImg = document.querySelectorAll('.slider-img');
 
 let activeIndex = 0;
 
-eleControls.addEventListener ('click'), function () {
+eleBtnDown.addEventListener('click', function () {
 
-	listEleImg[activeIndex].classList.remove ('active');
-	activeIndex++;
-	listEleImg[activeIndex].classList.add('active');
-
-	eleControls.classList.remove('hidden');
-	if (activeIndex === listEleImg.length -1) {
-		eleControls.classList.add('hidden');
-	} 
-}
-
-// eleBtnDown.addEventListener('click', function () {
-
-// 	listEleImg[activeIndex].classList.remove('active');
-
-// 	activeIndex++;
-
-// 	listEleImg[activeIndex].classList.add('active');
-
-// 	eleBtnUp.classList.remove('hidden');
-// 	if (activeIndex === listEleImg.length -1) {
-// 		eleBtnDown.classList.add('hidden');
-// 	} 
-// });
-
-// eleBtnUp.addEventListener('click', function () {
+	listEleImg[activeIndex].classList.remove('active');
 	
-// 	listEleImg[activeIndex].classList.remove('active');
+	if (activeIndex === listEleImg.length -1) {
+		activeIndex = 0;
+	} else {
+		activeIndex++;
+	}
 
-// 	activeIndex--;
+	listEleImg[activeIndex].classList.add('active');
+});
 
-// 	listEleImg[activeIndex].classList.add('active');
+eleBtnUp.addEventListener('click', function () {
+	
+	listEleImg[activeIndex].classList.remove('active');
 
-// 	eleBtnDown.classList.remove('hidden');
-// 	if (activeIndex === 0) {
-// 		eleBtnUp.classList.add('hidden');
-// 	}
-// });
+	if (activeIndex === 0) {
+		activeIndex = listEleImg.length -1;
+	} else {
+		activeIndex--;
+	}
+
+	listEleImg[activeIndex].classList.add('active');
+});
